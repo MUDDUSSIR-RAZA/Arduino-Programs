@@ -1,4 +1,4 @@
-// Define the pin numbers for the flame sensor, IR sensor, buzzer, laser, and lights
+// Define the pin numbers for the flame sensor, LDR sensor, buzzer, laser, and lights
 #define flamePin 2
 #define ldrSensorpin 3
 #define buzzer 12
@@ -17,13 +17,13 @@ void setup() {
 }
 
 void loop() {
-  // Read the value of the IR sensor
+  // Read the value of the LDR sensor
   int ldrSensorValue = digitalRead(ldrSensorpin);
 
   // Read the value of the flame sensor
   int flameValue = digitalRead(flamePin);
 
-  // If the IR sensor is detecting something, turn on the laser
+  // If the LDR sensor is detecting something, turn on the laser
   if (ldrSensorValue == HIGH) {
     digitalWrite(laser, HIGH);
   } else {
@@ -40,7 +40,7 @@ void loop() {
     digitalWrite(buzzer, LOW);
   }
 
-  // If both the flame sensor and IR sensor detect something, turn on the lights for 20ms and then turn them off for 20ms
+  // If both the flame sensor and LDR sensor detect something, turn on the lights for 20ms and then turn them off for 20ms
   if (flameValue == LOW && ldrSensorValue == HIGH) {
     digitalWrite(lights, HIGH);
     delay(20);
