@@ -1,3 +1,3 @@
-# Arduino-Programs
+# Irsensor Flamesensor Buzzer Lasser Arduino Program
  
 This Arduino program uses sensors (flame and IR) and output devices (buzzer, laser, and lights) to detect and respond to certain conditions. The IR sensor activates the laser when it detects something, while the flame sensor triggers the buzzer for a short duration when it detects a flame. If both sensors detect something, the program turns on the lights for a short time. The program is highly customizable and can be modified to work with a wide range of sensor and output device configurations. The code includes comments to help users easily understand what each section of the code does.
